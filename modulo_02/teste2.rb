@@ -1,1 +1,0 @@
-puts "Teste 02"
