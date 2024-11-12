@@ -1,3 +1,9 @@
+# if - significa 'SE'.
+# else - significa "SE NÂO".
+# unless - (Se não/ a menos que) - praticamente é o IF negativo.
+# case - (caso seja isso, faça isso)
+# Estrutura condicional ternária <condição> ? <Verdadeiro> : <falso> - Mesma coisa do if-else(apenas uma linha)
+
 # Estrutura IF (Se)
 print 'Digite um Número: ' # Print não pula linha. 
 x = gets.chomp.to_i
