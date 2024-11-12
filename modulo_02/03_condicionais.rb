@@ -32,3 +32,13 @@ case idade
   else 
     puts "Adulto"
 end
+puts "*****************"
+
+# Estrutura condicional ternária
+sexo = 'M'
+
+#      <condição> ? <Verdadeiro> : <falso> - Mesma coisa do if-else
+puts (sexo == 'M' ? 'Masculino' : "Feminino")
+
+#<condição> ? <Verdadeiro>  : <falso> - Outra forma de imprimie resultado
+sexo == 'M' ? (puts 'Masculino') : (puts 'Feminino')
