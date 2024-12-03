@@ -2,14 +2,7 @@
 
 <p><strong>Data:</strong> <%= data_br(Date.today) %></p><!-- Data do dia, com data formatada -->
 
-<ul>
-  <li>
-    <a href="/coins">Cadastro de Moedas HTML</a>
-  </li>
-  <li>
-    <%= link_to "Cadastro de Moedas RUBY", coins_path %>
-  </li>
-</ul>
+<%= render "menu" %><!--renderizando a pagina _menu.thml.erb, dentro desse index-->
 
 <p> Vocẽ está em ambiente de <strong><%= ambiente_rails %></strong></p><!-- Usando helpers -->
 
