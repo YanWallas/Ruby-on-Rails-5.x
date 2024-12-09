@@ -7,9 +7,61 @@ namespace :dev do
       end #As chaves '{}' ṕodem subistituir o do, end quando tiver apenas uma linha de codigo.
       show_spinner("Criando DB...") { %x(rails db:create) } #mesma coisa de cima, porem, utilizado quando se tem apenas uma linha de codigo.
       show_spinner("Migrando DB...") { %x(rails db:migrate) }
-      show_spinner("Buscando dados DB...") { %x(rails db:seed) }
+      %x(rails dev:add_coins)
+      %x(rails dev:add_mining_types)
     else
       puts "Vocẽ não está em ambiente de desenvolvimento!"
+    end
+  end
+
+  desc "Cadastra de Moedas"
+  task add_coins: :environment do
+    show_spinner("Cadastrando moedas...") do
+      coins = [
+      { 
+        description: "Bitcoin",
+        acronym: "BTC",
+        url_image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+      },
+      { 
+        description: "Ethereum",
+        acronym: "ETH",
+        url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+      },
+      { 
+        description: "Dash",
+        acronym: "DASH",
+        url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/131.png"
+      },
+      { 
+        description: "Iota",
+        acronym: "IOT",
+        url_image: "https://cryptologos.cc/logos/iota-iota-logo.png"
+      },
+      { 
+        description: "ZCash",
+        acronym: "ZEC",
+        url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/512/Zcash-ZEC-icon.png"
+      }]
+
+      coins.each do |coin|
+        Coin.find_or_create_by!(coin)
+      end
+    end
+  end
+
+  desc "Cadastro os tipos de mineração"
+  task add_mining_types: :environment do
+    show_spinner("Cadastrando tipos de mineração...") do
+      mining_types = [
+        {description: "Proof of Work", acronym: "PoW"},
+        {description: "Proof of Stake", acronym: "PoS"},
+        {description: "Proof of Capacity", acronym: "PoC"}
+      ]
+
+      mining_types.each do |mining_type|
+        MiningType.find_or_create_by!(mining_type)
+      end
     end
   end
 
