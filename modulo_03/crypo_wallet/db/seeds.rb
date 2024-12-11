@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# USE O RAILS DEV;SETUP (lib/tasks/dev.rake)
+# USE O RAILS DEV:SETUP (lib/tasks/dev.rake)
