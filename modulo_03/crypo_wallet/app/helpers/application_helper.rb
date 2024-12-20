@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def locale(locale)
+    I18n.locale == :en ? "English" : "Portugues-BR"
+  end
+
+
   def data_br(data_us)# Posso chamar esse metodo em qualquer lugar da aplicação.
     data_us.strftime("%d/%m/%Y")
   end
