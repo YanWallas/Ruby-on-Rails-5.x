@@ -1,9 +1,10 @@
 <h1>Seja Bem-Vindo!</h1>
-<p>Idioma usado nessa aplicação: <strong> <%= locale(I18n.locale) %> </strong></p>
-<p><strong>Data:</strong> <%= Date.today %></p><!-- Data do dia, com data formatada -->
+<p>Idioma usado nessa aplicação: <strong> <%= locale %> </strong></p>
+<p><strong>Date:</strong> <%= l(Date.today) %></p>
+<p><%= t('hello') %></p>
 
 <%= render "menu" %><!--renderizando a pagina _menu.thml.erb, dentro desse index-->
 
 <p> Vocẽ está em ambiente de <strong><%= ambiente_rails %></strong></p><!-- Usando helpers -->
 
-<p>Passando nome <strong>"<%= @nome %>"</strong>, pelo req. Params</p>
+<p>Passando nome <strong>"<%= @nome %>"</strong>, pelo req.Params</p>
