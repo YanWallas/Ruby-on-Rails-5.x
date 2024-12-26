@@ -1,5 +1,11 @@
 {
   "name": "crypo_wallet",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yan Wallas",
+  "license": "MIT"
 }
