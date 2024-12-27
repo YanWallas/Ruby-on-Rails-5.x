@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="form-group mb-4">
+    <%= form.label :description, class:"mb-2" %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Ex:.Bitcoin" %>
   </div>
 
-  <div class="field">
-    <%= form.label :acronym %>
-    <%= form.text_field :acronym %>
+  <div class="form-group mb-4">
+    <%= form.label :acronym, class:"mb-2" %>
+    <%= form.text_field :acronym, class:"form-control", placeholder:"Ex:.BTN" %>
   </div>
 
-  <div class="field">
-    <%= form.label :url_image %>
-    <%= form.text_field :url_image %>
+  <div class="form-group mb-4">
+    <%= form.label :url_image, class:"mb-2" %>
+    <%= form.text_field :url_image, class:"form-control", placeholder:"Ex:.https://Bitcoin-image-png.com" %>
     <%#= image_tag coin.url_image, width: 25, height: 25 %><!--image_tag e uma assistencia de tag(no final defini um tamanho)-->
   </div>
 
-  <div class="field">
-    <%= form.label :mining_type_id %>
-    <%= form.select("mining_type_id", @mining_type_options, { include_blank: 'Selecione...' }) %>
+  <div class="form-group mb-4">
+    <%= form.label :mining_type_id, class:"mb-2" %>
+    <%= form.select("mining_type_id", @mining_type_options, { include_blank: 'Selecione...' }, class:"form-control") %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions mb-3">
+    <%= form.submit nil, class:"btn btn-primary" %>
   </div>
 <% end %>
