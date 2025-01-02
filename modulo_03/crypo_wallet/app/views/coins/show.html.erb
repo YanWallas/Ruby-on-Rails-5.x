@@ -3,25 +3,25 @@
 <form>
   <div class="form-group mb-4">
     <%= label_tag nil, @coin.class.human_attribute_name(:description), class:"mb-2" %>
-    <%= text_field_tag nil, @coin.description, class:"form-control" %>
+    <%= text_field_tag nil, @coin.description, class:"form-control", disabled: true %>
   </div>
 
   <div class="form-group mb-4">
     <%= label_tag nil, @coin.class.human_attribute_name(:acronym), class:"mb-2" %>
-    <%= text_field_tag nil, @coin.acronym, class:"form-control" %>
+    <%= text_field_tag nil, @coin.acronym, class:"form-control", disabled: true %>
   </div>
 
   <div class="form-group mb-4">
     <%= label_tag nil, @coin.class.human_attribute_name(:url_image), class:"mb-2" %>
-    <%= text_field_tag nil, @coin.url_image, class:"form-control" %>
+    <%= text_field_tag nil, @coin.url_image, class:"form-control", disabled: true %>
     <%#= image_tag coin.url_image, width: 25, height: 25 %><!--image_tag e uma assistencia de tag(no final defini um tamanho)-->
   </div>
 
   <div class="form-group mb-4">
     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type), class:"mb-2" %>
-    <%= text_field_tag nil, @coin.mining_type.description, class:"form-control" %>
+    <%= text_field_tag nil, @coin.mining_type.description, class:"form-control", disabled: true %>
   </div>
 </form>
 
-<%= link_to t('links.edit'), edit_coin_path(@coin), class:"btn btn-primary" %> |
-<%= link_to t('links.back'), coins_path, class:"btn btn-primary" %>
+<%= link_to t('links.edit'), edit_coin_path(@coin), class:"btn btn-warning" %> |
+<%= link_to t('links.back'), coins_path, class:"btn btn-secondary" %>

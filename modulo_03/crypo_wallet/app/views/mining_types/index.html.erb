@@ -16,9 +16,9 @@
       <tr>
         <td><%= mining_type.description %></td>
         <td><%= mining_type.acronym %></td>
-        <td><%= link_to t('links.show'), mining_type %></td>
-        <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+        <td><%= link_to t('links.show'), mining_type, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type), class:"btn btn-outline-warning" %></td>
+        <td><%= link_to t('links.delete'), mining_type, class:"btn btn-outline-danger", method: :delete, data: { confirm: t('messages.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,6 +26,6 @@
 
 <br>
 
-<%= link_to t('new.mining_type'), new_mining_type_path, class:"btn btn-primary" %>
+<%= link_to t('new.mining_type'), new_mining_type_path, class:"btn btn-info" %>
 
-<%= link_to t('links.back'), root_path, class:"btn btn-primary" %>
+<%= link_to t('links.back'), root_path, class:"btn btn-secondary" %>

@@ -18,9 +18,9 @@
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td> <%= image_tag coin.url_image, size: '25x25' %></td><!--Outra forma de passar parametro de tamanho com size -->
-        <td><%= link_to t('links.show'), coin %></td>
-        <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
-        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+        <td><%= link_to t('links.show'), coin, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to t('links.edit'), edit_coin_path(coin), class:"btn btn-outline-warning" %></td>
+        <td><%= link_to t('links.delete'), coin, class:"btn btn-outline-danger", method: :delete, data: { confirm: t('messages.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,6 +28,6 @@
 
 <br>
 
-<%= link_to t('new.coin'), new_coin_path, class:"btn btn-primary" %>
+<%= link_to t('new.coin'), new_coin_path, class:"btn btn-info" %>
 
-<%= link_to t('links.back'), root_path, class:"btn btn-primary" %>
+<%= link_to t('links.back'), root_path, class:"btn btn-secondary" %>
