@@ -12,14 +12,20 @@
   </div>
 
   <div class="form-group mb-4">
-    <%= label_tag nil, @coin.class.human_attribute_name(:url_image), class:"mb-2" %>
-    <%= text_field_tag nil, @coin.url_image, class:"form-control", disabled: true %>
-    <%#= image_tag coin.url_image, width: 25, height: 25 %><!--image_tag e uma assistencia de tag(no final defini um tamanho)-->
-  </div>
-
-  <div class="form-group mb-4">
     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type), class:"mb-2" %>
     <%= text_field_tag nil, @coin.mining_type.description, class:"form-control", disabled: true %>
+  </div>
+
+  <div class="form-group mb-4 d-flex">
+      <div class="form-group mb-4 px-4">
+        <%= label_tag nil, @coin.class.human_attribute_name(:Imagem), class:"mb-2" %> <br>
+        <%= image_tag @coin.url_image, width: 50, height: 50 %><!--image_tag e uma assistencia de tag(no final defini um tamanho)-->
+      </div>
+
+      <div style="width: 100%" class="form-group mb-4">
+        <%= label_tag nil, @coin.class.human_attribute_name(:url_image), class:"mb-2" %>
+        <%= text_field_tag nil, @coin.url_image, width: 100, class:"form-control", disabled: true %>  
+      </div>
   </div>
 </form>
 
